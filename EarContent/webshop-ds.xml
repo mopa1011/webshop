@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE datasources
+    PUBLIC "-//JBoss//DTD JBOSS JCA Config 6.0//EN"
+    "http://www.jboss.org/j2ee/dtd/jboss-ds_6_0.dtd">
+
+<datasources>
+	<local-tx-datasource>
+	
+		<!-- PostgreSQL -->
+		<!-- -->
+		<jndi-name>webshopDS</jndi-name>
+		<connection-url>jdbc:postgresql:jbossdb</connection-url>
+		<driver-class>org.postgresql.Driver</driver-class>
+		<user-name>webshop</user-name>
+		<password>webshop</password>
+		<min-pool-size>1</min-pool-size>
+		<max-pool-size>5</max-pool-size>
+		<exception-sorter-class-name>
+			org.jboss.resource.adapter.jdbc.vendor.PostgreSQLExceptionSorter
+		</exception-sorter-class-name>
+		<metadata>
+			<type-mapping>PostgreSQL</type-mapping>
+		</metadata>
+		
+		<!-- MySQL -->
+		<!--
+		<jndi-name>swe1DS</jndi-name>
+		<connection-url>jdbc:mysql://localhost:3306/swe1db</connection-url>
+		<driver-class>com.mysql.jdbc.Driver</driver-class>
+		<user-name>swe1</user-name>
+		<password>swe</password>
+		<min-pool-size>1</min-pool-size>
+		<max-pool-size>5</max-pool-size>
+		<exception-sorter-class-name>
+			org.jboss.resource.adapter.jdbc.vendor.MySQLExceptionSorter
+		</exception-sorter-class-name>
+		<metadata>
+			<type-mapping>mySQL</type-mapping>
+		</metadata>
+		-->
+	</local-tx-datasource>
+</datasources>
